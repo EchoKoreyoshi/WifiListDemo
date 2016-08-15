@@ -52,6 +52,7 @@ public class WifiListActivity extends AppCompatActivity implements AdapterView.O
         setContentView(R.layout.activity_main);
         mWifiAdmin = new WifiAdmin(WifiListActivity.this);
         initView();
+
     }
 
     private void initView() {
@@ -113,7 +114,7 @@ public class WifiListActivity extends AppCompatActivity implements AdapterView.O
     private String initShowConn() {
         WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-        String s = wifiInfo.getSSID() + "\n"+"IP地址:" + mWifiAdmin.ipIntToString(wifiInfo.getIpAddress()) + "\n"+"Mac地址:" + wifiInfo.getMacAddress();
+        String s = wifiInfo.getSSID() + "\n" + "IP地址:" + mWifiAdmin.ipIntToString(wifiInfo.getIpAddress()) + "\n" + "Mac地址:" + wifiInfo.getMacAddress();
         return s;
     }
 

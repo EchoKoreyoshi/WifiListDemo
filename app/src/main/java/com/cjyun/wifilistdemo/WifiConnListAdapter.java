@@ -54,11 +54,10 @@ public class WifiConnListAdapter extends BaseAdapter {
         ImageView level = (ImageView) view.findViewById(R.id.wifi_conn_level);
 
         ssid.setText(mArr.get(position).getSsid());
-
+        //截取一段字符串  只要第一个【】号里面的内容
         String[] mWPE = mArr.get(position).getCapabilities().split("\\[");
         String[] s = mWPE[1].split("\\]");
         String s1 = s[0];
-
         Log.i(TAG, s1);
 
         wpe.setText("通过" + s1 + "保护");

@@ -10,7 +10,9 @@
         android:id="@+id/wifi_conn_lv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:scrollbarStyle="outsideInset">
     </ListView>
 
     <LinearLayout
@@ -22,7 +24,7 @@
             android:id="@+id/wifi_show_conn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_red_light"
             android:textSize="20sp"/>
     </LinearLayout>
 
